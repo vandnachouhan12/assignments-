@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me - Vandna Chouhan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* black background */
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            color: #1e90ff; /* blue */
+        }
+
+        nav {
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #1e90ff;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .name-card, .skills-card, .goal-card {
+            background: #111;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            opacity: 0;
+        }
+
+        .slide-right {
+            transform: translateX(100px);
+            animation: slideRight 1s forwards;
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        h3 {
+            color: #1e90ff;
+        }
+
+        @keyframes slideRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Me</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Vandna Chouhan Name Card -->
+    <div class="name-card slide-right" style="animation-delay:0.5s;color: #1e90ff;">
+        <h2>Vandna Chouhan</h2>
+        <p >I am a Cyber Security Analyst, and my role is to protect systems, secure data, and raise awareness about online safety.</p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="skills-card slide-right" style="animation-delay:1s;">
+        <h3>My Skills</h3>
+        <p class="fade-in" style="animation-delay:1.5s; color: green;">✔ cybersecurity Analyst</p>
+        <p class="fade-in" style="animation-delay:2s; color: green;">✔ data Analyst</p>
+        <p class="fade-in" style="animation-delay:2.5s;color: green;">✔ bca student</p>
+        <p class="fade-in" style="animation-delay:3s;color: green;">✔ Cyber Security Awareness</p>
+        <p class="fade-in" style="animation-delay:3.5s;color: green;">✔ Responsive Web Design</p>
+    </div>
+
+    <!-- Goal Section -->
+    <div class="goal-card slide-right" style="animation-delay:4s;">
+        <h3>My Goal</h3>
+        <p class="fade-in" style="animation-delay:4.5s;color: green;">
+            To become a skilled web developer with strong knowledge of cybersecurity and create professional, secure, and user-friendly websites.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Vandna Chouhan</p>
+</footer>
+
+<script>
+    // Sequential fade-in for skills and goal
+    const fadeItems = document.querySelectorAll('.fade-in');
+    fadeItems.forEach(item => {
+        const delay = item.style.animationDelay;
+        item.style.animation = `fadeIn 0.8s forwards ${delay}`;
+    });
+</script>
+
+</body>
+</html>

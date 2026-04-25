@@ -1,0 +1,54 @@
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    /* Background image */
+    background-image: url('https://img.freepik.com/free-photo/cybersecurity-concept-collage-design_23-2151877167.jpg?w=360'); /* your image file */
+    background-size: cover;        /* image covers entire page */
+    background-position: center;   /* center the image */
+    background-repeat: no-repeat;  /* do not repeat */
+    background-attachment: fixed;  /* keeps image fixed while scrolling */
+
+    color: white;                  /* text color on top of image */
+}
+nav a {
+position: relative;
+color: white;
+margin: 10px;
+text-decoration: none;
+padding-bottom: 5px;
+}
+
+/* Blue underline (hidden by default) */
+nav a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0%;
+height: 2px;
+background-color: #1e90ff;
+transition: 0.3s;
+}
+
+/* On hover → show line */
+nav a:hover::after {
+width: 100%;
+}
+
+/* Active page → always show blue line */
+nav a.active::after {
+width: 100%;
+}
+nav a:hover {
+    color: #1e90ff;
+  
+}
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+}
+
